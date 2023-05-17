@@ -1,6 +1,11 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+      - echo Running Tests
+      - python -m unittest discover 
   build:
     commands:
       - docker build -f Dockerfile -t git.systementor.se/philip.nilsson/yacloudpython .

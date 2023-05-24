@@ -1,7 +1,8 @@
 import unittest
 from app import app, get_training_log
 from flask import url_for
-# from app import app
+from unittest.mock import patch
+import os
 
 class TestGetTrainingLog(unittest.TestCase):
     def setUp(self):

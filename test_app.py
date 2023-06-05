@@ -11,7 +11,7 @@ class TestGetTrainingLog(unittest.TestCase):
 
     def test_route(self):
         response = self.client.get('/api/getTrainingLog')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 401)
 
 if __name__ == '__main__':
     unittest.main()

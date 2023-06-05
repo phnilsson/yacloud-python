@@ -8,6 +8,6 @@ phases:
       - python -m unittest discover 
   build:
     commands:
-      - docker build -f Dockerfile -t git.systementor.se/philip.nilsson/yacloudpython .
       - docker login -u philip.nilsson -p yacloud1 https://git.systementor.se
+      - docker build -f Dockerfile -t git.systementor.se/philip.nilsson/yacloudpython .
       - docker push git.systementor.se/philip.nilsson/yacloudpython
